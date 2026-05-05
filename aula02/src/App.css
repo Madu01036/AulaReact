@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  background-color: #6495ed;
+  background-color:#3490eb ;
   color: white;
   text-align: center;
   padding: 20px;
@@ -12,9 +12,10 @@ h1 {
 }
 
 .card {
-  background-color: violet;
+  background-color: #6495ed;
+  color: white;
   padding: 20px;
   width: 500px;
-  border-radius: 1opx;
+  border-radius: 10px;
   margin: 20px auto;
 }
