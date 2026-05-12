@@ -1,7 +1,7 @@
-export default function Exercicio1({ peso, altura }) {
+export default function Exercicio2({ peso, altura }) {
     let pes = Number(peso)
-    let alt = Number(peso);
-    let imc = peso / (altura * altura);
+    let alt = Number(altura);
+    let imc = pes / (alt * alt);
 
     return (
         <div>
