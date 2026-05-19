@@ -1,9 +1,15 @@
-export default function Exercicio5({}){
-    let consultas = Number(consult);
-    let salBruto = Number(salB);
-    let aliq = 0.08;
-    let des = aliq * salB;
-    let salLiq = (salB)  
-    
+export default function Exercicio5({ consultas }) {
+    const qtdConsultas = Number(consultas);
+    const salB = qtdConsultas * 150.00;
+    const inss = salB * 0.08;
+    const salL = salB - inss;
 
+    return (
+        <div>
+            Para {qtdConsultas} consultas: 
+            Salário Bruto: R$ {salB.toFixed(2)}, 
+            INSS: R$ {inss.toFixed(2)}, 
+            Salário Líquido: R$ {salL.toFixed(2)}
+        </div>
+    );
 }
