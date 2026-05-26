@@ -6,6 +6,7 @@ export default function Exercicio4({baset, alturat}){
 
     return(
         <div>
+            <br />
             A área desse triangulo é {area}
         </div>
     )

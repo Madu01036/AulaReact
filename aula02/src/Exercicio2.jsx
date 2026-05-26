@@ -5,6 +5,7 @@ export default function Exercicio2({ peso, altura }) {
 
     return (
         <div>
+            <br />
             O IMC dessa pessoa é de {imc}
         </div>
     )

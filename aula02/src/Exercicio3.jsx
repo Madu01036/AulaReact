@@ -6,6 +6,7 @@ export default function Exercicio3({ nota1, nota2 }) {
 
     return (
         <div>
+            <br />
             A média desse aluno é de {media}
         </div>
     )

@@ -7,6 +7,7 @@ export default function Exemplo({ num1, num2 }) {
             <p>
                 Número1: {num1} <br />
                 Número2: {num2} <br />
+                <br />
                 A soma é: {soma}
             </p>
         </div>

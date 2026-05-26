@@ -4,8 +4,8 @@ export default function Exercicio1({ numero }) {
 
     return (
         <div>
-
-            O quadrado do número {numero} é {quadrado} e o cubo desse número é {cubo}
+            <br />
+            O quadrado do número {numero} é {quadrado} e o cubo desse número é {cubo} 
 
         </div>
     )

@@ -6,9 +6,11 @@ export default function Exercicio5({ consultas }) {
 
     return (
         <div>
+            <br />
             Para {qtdConsultas} consultas: 
-            Salário Bruto: R$ {salB.toFixed(2)}, 
-            INSS: R$ {inss.toFixed(2)}, 
+            <br />
+            Salário Bruto: R$ {salB.toFixed(2)},
+            INSS: R$ {inss.toFixed(2)},
             Salário Líquido: R$ {salL.toFixed(2)}
         </div>
     );

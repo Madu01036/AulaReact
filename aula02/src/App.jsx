@@ -6,8 +6,8 @@ import Exercicio3 from "./Exercicio3";
 import Exercicio4 from "./Exercicio4";
 import Exercicio5 from "./Exercicio5";
 import Exercicio6 from "./Exercicio6";
+import Exercicio7 from "./Exercicio7";
 
-export default function App() {
   return (
     <div>
       <h1> Aula 02 - Criação de Componentes e Props </h1>
@@ -48,9 +48,20 @@ export default function App() {
 
       <div className="card">
         <h3>Exercício 05</h3>
-        <Exercicio5 consultas={35}/>
-        <Exercicio5 consultas={50}/>
+        <Exercicio5 consultas={35} />
+        <Exercicio5 consultas={50} />
       </div>
+
+      <div className="card">
+        <h3>Exercício 06</h3>
+        <Exercicio6 capi={1000} taxa={5} meses={5} />
+        <Exercicio6 capi={2000} taxa={10} meses={10} />
+      </div>
+      
+      <div className="card">
+        <h3>Exercício 07</h3>
+        <Exercicio7 cel={30} />
+      </div>
+
     </div>
   )
-}
