@@ -18,7 +18,7 @@ export default function SaoPaulo() {
         </p>
 
         <p>
-          <Link to="/">Voltar</Link>
+          <Link to="/"> Voltar </Link>
         </p>
         
       </div>
