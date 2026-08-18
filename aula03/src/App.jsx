@@ -27,7 +27,7 @@ import SaoPaulo from './Páginas/SaoPaulo';
 
 import Parana from './Páginas/Parana';
 import RioGrandeSul from './Páginas/RioGrandeSul';
-import SantaCatarina from './Parinas/SantaCatarina';
+import SantaCatarina from './Páginas/SantaCatarina';
 
 import DistritoFederal from './Páginas/DistritoFederal';
 import Goias from './Páginas/Goias';
