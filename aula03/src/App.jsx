@@ -5,7 +5,7 @@ import Home from "./Páginas/Home";
 import Acre from "./Páginas/Acre";
 import Amapa from './Páginas/Amapa';
 import Amazonas from "./Páginas/Amazonas";
-import Para from "./Páginas/Para"; // Corrigido de Parana para Para
+import Para from "./Páginas/Para"; // 
 import Rondonia from './Páginas/Rondonia';
 import Roraima from './Páginas/Roraima';
 import Tocantins from './Páginas/Tocantins';

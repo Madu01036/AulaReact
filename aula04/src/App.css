@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-color: cornflowerblue;
+  color: white;
+
+  padding: 20px;
+  margin: 0;
+
+  text-align: center;
+}
+
+.conteudo {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+
+  border: 1px solid cornflowerblue;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px gray;
+}
+
+.conteudo li {
+  line-height: 1.5;
+}
+
+.conteudo a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+input [type=text], input [type=number]{
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 5px;
+}
+
+input [type=button]{
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+}
