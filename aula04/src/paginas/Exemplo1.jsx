@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Exemplo1() {
-  const [nome, setNome] = useState();
+  e.preventDefault();
+
+  const [nome, setNome] = useState("");
   const [idade, setIdade] = useState();
 
-  const [dias, setDias] = useState();
+  const [dias, setDias] = useState("");
   const [resultado, setResultado] = useState();
 
   function calcular() {
@@ -16,12 +18,12 @@ export default function Exemplo1() {
 
   function processar() {
     let res = idade * 365;
-
+    calcular();
     setResultado(
       <div>
-        O aluno {nome} já viveu {res} dias.
+        O aluno {nome} já viveu {res} dias!
       </div>
-    )
+    );
   }
 
   return (
@@ -30,39 +32,34 @@ export default function Exemplo1() {
 
       <div className="conteudo">
         <form>
-          <p>
-            Digite o nome do aluno <br />
-            <input
-              type="text"
-              Value={nome}
-              onChange={(e) => setNome(e.target.value)}
-            />
-          </p>
-          <p>
-            Digite a idade do aluno <br />
-            <input
-              type="number"
-              Value={idade}
-              onChange={(e) => setIdade(e.target.value)}
-            />
-          </p>
-
-          <p>
-            <input type="button" value="Calcular" onClick={calcular} />
-          </p>
-          <p>
-            <input type="button" value="Processar" onClick={processar} />
-          </p>
-        </form>
-        <p>
-          Nome do Aluno: {nome} <br />
-          Idade do Aluno: {idade}
+          <label htmlFor="nome">Nome</label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
           <br />
-          Dias vividos: {dias}
-        </p>
+          <br />
+          <label htmlFor="idade">Idade</label>
+          <input
+            type="number"
+            name="idade"
+            id="idade"
+            value={idade}
+            onChange={(e) => setIdade(e.target.value)}
+            step={1}
+          />
 
+          <input type="button" value="Enviar" onClick={processar} />
+        </form>
+
+        <p>Nome do Aluno: {nome}</p>
+        <p>Idade: {idade}</p>
+
+        <p>Dias Vividos: {dias}</p>
         <p>{resultado}</p>
-
         <p>
           <Link to="/">Voltar</Link>
         </p>
