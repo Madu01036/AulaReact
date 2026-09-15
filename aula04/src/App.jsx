@@ -4,6 +4,11 @@ import Exemplo1 from "./paginas/Exemplo1";
 import Exemplo2 from "./paginas/Exemplo2";
 import Exercicio1 from "./paginas/Exercicio1";
 import Exercicio2 from "./paginas/Exercicio2";
+import Exercicio3 from "./paginas/Exercicio3"
+import Exercicio4 from "./paginas/Exercicio4"
+import Exercicio5 from "./paginas/Exercicio5"
+
+import Exercicio6 from "./paginas/Exercicio6";
 
 export default function App() {
   return (
@@ -16,6 +21,10 @@ export default function App() {
 
         <Route path="/exercicio1" element={<Exercicio1 />} />
         <Route path="/exercicio2" element={<Exercicio2 />} />
+        <Route path="/exercicio3" element={<Exercicio3 />} />
+        <Route path="/exercicio4" element={<Exercicio4 />} />
+        <Route path="/exercicio5" element={<Exercicio5 />} />
+        <Route path="/exercicio6" element={<Exercicio6 />} />
       </Routes>
     </BrowserRouter>
   );
