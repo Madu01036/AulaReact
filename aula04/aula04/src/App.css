@@ -1,0 +1,56 @@
+body
+{
+    margin : 0;
+    padding: 0;
+    background-color: azure;
+}
+
+h1
+{
+    background-color: #002096;
+    color : white;
+
+    padding: 20px;
+    margin: 0;
+
+    text-align: center;
+}
+
+.conteudo
+{
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 14px 2px rgb(190, 190, 190);
+}
+
+.conteudo li
+{    
+    line-height: 1.5;
+}
+
+.conteudo a
+{
+    color : #004196;
+}
+
+input[type=text], input[type=number]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+input[type=button]{
+    width: 100px;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(21, 196, 108);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 0px rgb(114, 114, 114);
+}
