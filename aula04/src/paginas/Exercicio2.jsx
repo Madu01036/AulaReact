@@ -1,42 +1,52 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
 export default function Exercicio2() {
-  const [fahrenheit, setFahrenheit] = useState("");
-  const [resultado, setResultado] = useState("");
+    const [result, setResult] = useState('');
+    const [fahrenheit, setFahrenheti] = useState('');
+    
+    function calcular() {
+        let celcius
+        celcius = ((Number(fahrenheit) - 32) * 5) / 9
+    
+        setResult(
+            <div>
+                {fahrenheit} ºF em ºC é {celcius.toFixed(2)}
+            </div>
+        )
+    }
+    return (
+        <div>
 
-  function calcularCelsius(e) {
-    e.preventDefault();
+            <h1>Exercício 2</h1>
 
-    let celsius;
-    celsius = ((Number(fahrenheit) - 32) * 5) / 9;
+            <div className="conteudo">
 
-    setResultado(<p>Temperatura Celsius = {celsius.toFixed(2)}</p>);
-  }
+                <form>
 
-  return (
-    <div>
-      <h1>Exercício 2</h1>
-      <div className="conteudo">
-        <form onSubmit={calcularCelsius}>
-          <p>Digite a temperatura em Fahrenheit</p>
-          <p>
-            <input
-              type="text"
-              value={fahrenheit}
-              onChange={(e) => setFahrenheit(e.target.value)}
-            />
-          </p>
-          <p>
-            <input type="submit" value="Calcular" />
-          </p>
-          {resultado}
-        </form>
+                    <p>Digite a temperatura em Fahrenheit</p>
+                    <input type="text"
+                        value={fahrenheit}
+                        onChange={(e) => setFahrenheti(e.target.value)}
+                    />
 
-        <p>
-          <Link to="/">Voltar</Link>
-        </p>
-      </div>
-    </div>
-  );
+                    <input type="button" value='calcular' onClick={calcular} />
+
+                </form>
+
+
+                <div>
+                    {result}
+                </div>
+
+                <p>
+                    <Link to="/">Voltar</Link>
+                </p>
+
+            </div>
+
+        </div>
+    );
 }

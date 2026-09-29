@@ -1,47 +1,50 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+export default function Exercicio5() {
+    const [lado, setLado] = useState('');
+    const [result, setResult] = useState('');
 
-export default function Quadrado() {
-  const [lado, setLado] = useState("");
-  const [resultado, setResultado] = useState("");
+    function Calcular() {
+        let valorquadrado = lado ** 2
 
-  function calcularArea(e) {
-    e.preventDefault();
+        setResult(
+            <div>
+                Valor do lado: {lado}
+                <br />
+                Quadrado: {valorquadrado}
+            </div>
+        );
+    }
 
-    let area;
-    let l = Number(lado);
+    return (
+        <div>
 
-    area = l * l;
+            <h1>Exercício 5</h1>
 
-    setResultado(<p>A área do quadrado é = {area.toFixed(2)}</p>);
-  }
+            <div className="conteudo">
 
-  return (
-    <div>
-      <h1>Exercício: Área do Quadrado</h1>
+                <p>Digite o valor do lado do quadrado</p>
 
-      <div className="conteudo">
-        <form onSubmit={calcularArea}>
-          <p>Digite o valor do lado do Quadrado</p>
+                <input  type="text" 
+                        value={lado}
+                        onChange={(e) => setLado(e.target.value)} 
+                 />
 
-          <p>
-            <input 
-              type="text" 
-              value={lado} 
-              onChange={(e) => setLado(e.target.value)} 
-            />
-          </p>
+                <br />
+                <br />
+                 <input type="button" value="Calcular" onClick={Calcular} />
 
-          <p>
-            <input type="submit" value="Calcular" />
-          </p>
-          {resultado}
-        </form>
+                <br /> <br />
+                <div>
+                    {result}
+                </div>
 
-        <p>
-          <Link to="/">Voltar</Link>
-        </p>
-      </div>
-    </div>
-  );
+                <p>
+                    <Link to="/">Voltar</Link>
+                </p>
+
+            </div>
+
+        </div>
+    );
 }

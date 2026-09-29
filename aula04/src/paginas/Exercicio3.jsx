@@ -1,69 +1,71 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-export default function Exercicio3() {
-  const [valor, setValor] = useState("");
-  const [taxa, setTaxa] = useState("");
-  const [tempo, setTempo] = useState("");
-  const [resultado, setResultado] = useState("");
+export default function Exercicio3()
+{
+    const [result, setResult] = useState('');
+    
+    const [valor, setValor] = useState('');
+    const [taxa, setTaxa] = useState('');
+    const [tempo, setTempo] = useState('');
+    
+    function calcular() {
+        
+        let valorparcela;
+        valorparcela = Number(valor) + Number(valor) * (Math.pow(Number(taxa) , 2) / 100) * Number(tempo); 
 
-  function calcularParcela(e) {
-    e.preventDefault();
+        setResult(
+            <div>
+                Valor: {valor}
+                <br />
+                Taxa:{taxa}
+                <br />
+                Meses:{tempo}
+                <br />
+                <br />
+                Parcela atualizada: {Intl.NumberFormat('pt-BR').format(valorparcela)}
+            </div>
+        )
+    }
+    return (
+        <div>
 
-    let valorParcela;
-    let v = Number(valor);
-    let tax = Number(taxa);
-    let temp = Number(tempo);
+            <h1>Exercício 3</h1>
 
-    valorParcela = v + v * (Math.pow(tax, 2) / 100) * temp;
+            <div className="conteudo">
 
-    setResultado(
-      <p>Valor da parcela atualizado = R$ {valorParcela.toFixed(2)}</p>
+            <form>
+
+                <p>Digite o valor da prestação em atraso</p>
+                <input type="text" 
+                value={valor}
+                onChange={(e) => setValor(e.target.value)}
+                />
+
+                <p>Digite a taxa</p>
+                <input type="text" 
+                value={taxa}
+                onChange={(e) => setTaxa(e.target.value)}
+                />
+
+                <p>Digite o tempo em meses</p>
+                <input type="text" 
+                value={tempo}
+                onChange={(e) => setTempo(e.target.value)}
+                />
+
+                <input type="button" value="calcular" onClick={calcular}/>
+
+
+            </form>
+<br />
+            {result}
+                <p>
+                    <Link to="/">Voltar</Link>
+                </p>
+
+            </div>
+
+        </div>
     );
-  }
-
-  return (
-    <div>
-      <h1>Exercício 3</h1>
-      <div className="conteudo">
-        <form onSubmit={calcularParcela}>
-          <p>Digite o valor da prestação</p>
-          <p>
-            <input
-              type="text"
-              value={valor}
-              onChange={(e) => setValor(e.target.value)}
-            />
-          </p>
-
-          <p>Digite a taxa de juros (%)</p>
-          <p>
-            <input
-              type="text"
-              value={taxa}
-              onChange={(e) => setTaxa(e.target.value)}
-            />
-          </p>
-
-          <p>Digite o tempo de dias de atraso</p>
-          <p>
-            <input
-              type="text"
-              value={tempo}
-              onChange={(e) => setTempo(e.target.value)}
-            />
-          </p>
-
-          <p>
-            <input type="submit" value="Calcular" />
-          </p>
-          {resultado}
-        </form>
-
-        <p>
-          <Link to="/">Voltar</Link>
-        </p>
-      </div>
-    </div>
-  );
 }
